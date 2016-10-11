@@ -682,6 +682,19 @@
             <response code="400">Solicitação imprópria (Bad Request)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
+        <member name="M:Domain.Controllers.UsuarioController.GetId(System.Int32)">
+            <summary>
+            Listar Usuário
+            </summary>
+            <param name="Usuario">Usuario Modelo</param>
+            <param name="Id">Id do Usuário</param>
+            <param name="Lat">Latitude do Usuário</param>
+            <param name="Lng">Longitude do Usuário</param>
+            <response code="200">OK</response>
+            <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
+            <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
+        </member>
         <member name="M:Domain.Controllers.UsuarioController.Post(Domain.Entities.Usuario)">
             <summary>
             Adicionar Usuário
@@ -699,6 +712,18 @@
             </remarks>
             <response code="200">OK</response>
             <response code="201">Criado</response>
+            <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
+        </member>
+        <member name="M:Domain.Controllers.UsuarioController.Put(System.Int32,Domain.Entities.Usuario)">
+            <summary>
+            Atualizar Usuário
+            </summary>
+            <param name="Usuario">Usuario Modelo</param>
+            <param name="Id">Id do Usuário</param>
+            <param name="Lat">Latitude do Usuário</param>
+            <param name="Lng">Longitude do Usuário</param>
+            <response code="200">OK</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>

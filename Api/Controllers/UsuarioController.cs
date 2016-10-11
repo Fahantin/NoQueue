@@ -36,6 +36,35 @@ namespace Domain.Controllers
         }
 
 
+        //GET ID
+        /// <summary>
+        /// Listar Usuário
+        /// </summary>
+        /// <param name="Usuario">Usuario Modelo</param>
+        /// <param name="Id">Id do Usuário</param>
+        /// <param name="Lat">Latitude do Usuário</param>
+        /// <param name="Lng">Longitude do Usuário</param>
+        /// <response code="200">OK</response>
+        /// <response code="400">Solicitação imprópria (Bad Request)</response>
+        /// <response code="404">Não Encontrado (Not Found)</response>
+        /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
+        [ResponseType(typeof(Usuario))]
+        public IHttpActionResult GetId(int id)
+        {
+            Usuario user = _usuarios.Find(x => x.Id == id);
+
+            if (user != null)
+            {
+                return Ok(user);
+            }
+            else
+            {
+                //throw new HttpResponseException(HttpStatusCode.NotFound);
+                return NotFound();
+            }
+        }
+
+
         //POST
         /// <summary>
         /// Adicionar Usuário
@@ -56,17 +85,48 @@ namespace Domain.Controllers
         /// <response code="400">Solicitação imprópria (Bad Request)</response>
         /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         [ResponseType(typeof(Usuario))]
-        public HttpResponseMessage Post([FromBody]Usuario user)
+        public HttpResponseMessage Post([FromBody]Usuario usuario)
         {
-             if (user != null)
+            if (usuario != null)
             {
-                _usuarios.Add(user);
+                _usuarios.Add(usuario);
                 var msg = new HttpResponseMessage(HttpStatusCode.Created);
                 return msg;
             }
             else
             {
                 throw new HttpResponseException(HttpStatusCode.Conflict);
+            }
+        }
+
+
+        //PUT
+        /// <summary>
+        /// Atualizar Usuário
+        /// </summary>
+        /// <param name="Usuario">Usuario Modelo</param>
+        /// <param name="Id">Id do Usuário</param>
+        /// <param name="Lat">Latitude do Usuário</param>
+        /// <param name="Lng">Longitude do Usuário</param>
+        /// <response code="200">OK</response>
+        /// <response code="400">Solicitação imprópria (Bad Request)</response>
+        /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
+        [ResponseType(typeof(Usuario))]
+        public IHttpActionResult Put(int id, Usuario usuario)
+        {
+            Usuario user = _usuarios.Find(x => x.Id == id);
+
+            if (user != null)
+            {
+                user.Id = usuario.Id;
+                user.Lat = usuario.Lat;
+                user.Lng = usuario.Lng;
+                return Ok(_usuarios);
+            }
+            else
+            {
+                //throw new HttpResponseException(HttpStatusCode.NotFound);
+                return NotFound();
             }
         }
 
@@ -98,22 +158,5 @@ namespace Domain.Controllers
                 return NotFound();
             }
         }
-
-
-        // PUT api/values
-        //public IHttpActionResult Put(Usuario user)
-        //{
-        //    if (id != null)
-        //    {
-        //        //return new HttpResponseMessage(HttpStatusCode.OK);
-        //        _usuarios = _usuarios.Where(note => note.Id != id).ToList();
-        //        return Ok();
-        //    }
-        //    else
-        //    {
-        //        //throw new HttpResponseException(HttpStatusCode.NotFound);
-        //        return NotFound();
-        //    }
-        //}
     }
 }

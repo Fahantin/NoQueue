@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>Senha Controller</title>
+	<meta charset="utf-8" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="scripts/jquery-1.9.1.min.js"></script>    
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/angular.min.js"></script>
+    <script src="app/main.js"></script>
+    <script src="app/controllers/SenhaController.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron" ng-controller="SenhaController">        
+            <table class="table table-responsive table-striped">
+                    <th>Id</th>
+                    <th>Id do Serviço</th>
+                    <th>Id do Usuário</th>
+                    <th>Senha do Usuário</th>
+                </tr>
+                <tr ng-repeat="r in retorno">
+                    <td>{{ r.id }}</td>
+                    <td>{{ r.idServico }}</td>
+                    <td>{{ r.idUsuario }}</td>
+                    <td>{{ r.senhaUsuario }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

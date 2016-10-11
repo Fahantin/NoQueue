@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>Mobile App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Mobile App</title>
+    <link href="css/framework7.ios.min.css" rel="stylesheet" />
+    <link href="css/framework7.material.colors.css" rel="stylesheet" />
+    <link href="css/framework7.material.css" rel="stylesheet" />
+
+    <script src="js/framework7.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/angular.min.js"></script>
+    <script src="app/main.js"></script>
+    <script src="app/controllers/UsuarioController.js"></script>    
+    <script src="js/jquery-1.9.1.js"></script>    
+</head>
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <!-- Panels overlay-->
+    <!-- Left panel with reveal effect-->
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding">Usuario</div>
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                          </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content">
+                        <div class="list-block">
+                            <div class="list-group" ng-controller="UsuarioController">
+                                <ul ng-repeat="r in retorno">                                    
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">Id</div>
+                                            <div class="item-after">{{ r.id }}</div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">Lat</div>
+                                            <div class="item-after">{{ r.lat }}</div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">Lng</div>
+                                            <div class="item-after">{{ r.lng }}</div>
+                                        </div>
+                                    </li>
+                                    <hr />
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                        
+        </div>
+    </div>
+</body>
+</html>

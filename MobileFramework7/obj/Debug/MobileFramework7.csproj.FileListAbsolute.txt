@@ -1,0 +1,66 @@
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\MobileFramework7.dll.config
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\MobileFramework7.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\MobileFramework7.pdb
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.AI.DependencyCollector.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.AI.Web.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.AI.WindowsServer.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.ApplicationInsights.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.Diagnostics.Tracing.EventSource.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.Threading.Tasks.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\System.IO.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\System.Runtime.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\System.Threading.Tasks.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.AI.DependencyCollector.xml
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.AI.Web.xml
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.AI.WindowsServer.xml
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.ApplicationInsights.xml
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.Diagnostics.Tracing.EventSource.xml
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.Threading.Tasks.xml
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\System.IO.xml
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\System.Runtime.xml
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\bin\System.Threading.Tasks.xml
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\obj\Debug\MobileFramework7.csproj.App.config
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\obj\Debug\MobileFramework7.csprojResolveAssemblyReference.cache
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\obj\Debug\MobileFramework7.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\MobileFramework7\obj\Debug\MobileFramework7.pdb
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\MobileFramework7.dll.config
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\MobileFramework7.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\MobileFramework7.pdb
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.AI.Web.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.Diagnostics.Tracing.EventSource.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.Threading.Tasks.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\System.IO.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\System.Runtime.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\System.Threading.Tasks.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.AI.Web.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.Diagnostics.Tracing.EventSource.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.Threading.Tasks.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\System.IO.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\System.Runtime.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\bin\System.Threading.Tasks.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\obj\Debug\MobileFramework7.csproj.App.config
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\obj\Debug\MobileFramework7.csprojResolveAssemblyReference.cache
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\obj\Debug\MobileFramework7.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\MobileFramework7\obj\Debug\MobileFramework7.pdb

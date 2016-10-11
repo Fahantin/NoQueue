@@ -1,0 +1,10 @@
+C:\Users\Teste\Documents\Visual Studio 2015\Projects\NoQueue\Domain\bin\Release\Domain.dll.config
+C:\Users\Teste\Documents\Visual Studio 2015\Projects\NoQueue\Domain\bin\Release\Domain.dll
+C:\Users\Teste\Documents\Visual Studio 2015\Projects\NoQueue\Domain\bin\Release\Domain.pdb
+C:\Users\Teste\Documents\Visual Studio 2015\Projects\NoQueue\Domain\bin\Release\EntityFramework.dll
+C:\Users\Teste\Documents\Visual Studio 2015\Projects\NoQueue\Domain\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Teste\Documents\Visual Studio 2015\Projects\NoQueue\Domain\bin\Release\EntityFramework.xml
+C:\Users\Teste\Documents\Visual Studio 2015\Projects\NoQueue\Domain\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Teste\Documents\Visual Studio 2015\Projects\NoQueue\Domain\obj\Release\Domain.csprojResolveAssemblyReference.cache
+C:\Users\Teste\Documents\Visual Studio 2015\Projects\NoQueue\Domain\obj\Release\Domain.dll
+C:\Users\Teste\Documents\Visual Studio 2015\Projects\NoQueue\Domain\obj\Release\Domain.pdb

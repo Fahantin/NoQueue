@@ -35,6 +35,36 @@ namespace Domain.Controllers
         }
 
 
+        //GET ID
+        /// <summary>
+        /// Listar Senha
+        /// </summary>
+        /// <param name = "Senha" > Senha Modelo</param>
+        /// <param name="Id">Id da Senha</param>
+        /// <param name="IdServico">Id do Serviço</param>
+        /// <param name="IdUsuario">Id do Usuário</param>
+        /// <param name="SenhaUsuario">Senha do Usuario</param>
+        /// <response code="200">OK</response>
+        /// <response code="400">Solicitação imprópria (Bad Request)</response>
+        /// <response code="404">Não Encontrado (Not Found)</response>
+        /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
+        [ResponseType(typeof(Usuario))]
+        public IHttpActionResult GetId(int id)
+        {
+            Senha senha = _senhas.Find(x => x.Id == id);
+
+            if (senha != null)
+            {
+                return Ok(senha);
+            }
+            else
+            {
+                //throw new HttpResponseException(HttpStatusCode.NotFound);
+                return NotFound();
+            }
+        }
+
+
         //POST
         /// <summary>
         /// Adicionar Senha
@@ -69,6 +99,39 @@ namespace Domain.Controllers
             else
             {
                 throw new HttpResponseException(HttpStatusCode.Conflict);
+            }
+        }
+
+
+        //PUT
+        /// <summary>
+        /// Atualizar Senha
+        /// </summary>
+        /// <param name="Senha">Senha Modelo</param>
+        /// <param name="Id">Id da Senha</param>
+        /// <param name="IdServico">Id do Serviço</param>
+        /// <param name="IdUsuario">Id do Usuário</param>
+        /// <param name="SenhaUsuario">Senha do Usuario</param>
+        /// <response code="200">OK</response>
+        /// <response code="400">Solicitação imprópria (Bad Request)</response>
+        /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
+        [ResponseType(typeof(Senha))]
+        public IHttpActionResult Put(int id, Senha senha)
+        {
+            Senha sen = _senhas.Find(x => x.Id == id);
+
+            if (senha != null)
+            {
+                sen.Id = senha.Id;
+                sen.IdServico = senha.IdServico;
+                sen.IdUsuario = senha.IdUsuario;
+                sen.SenhaUsuario = senha.SenhaUsuario;
+                return Ok(_senhas);
+            }
+            else
+            {
+                //throw new HttpResponseException(HttpStatusCode.NotFound);
+                return NotFound();
             }
         }
 

@@ -1,0 +1,140 @@
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\ApplicationInsights.config
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\csc.exe
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\vbc.exe
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\WebAngularJS.dll.config
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\WebAngularJS.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\WebAngularJS.pdb
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.Web.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.Web.xml
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\obj\Debug\WebAngularJS.csprojResolveAssemblyReference.cache
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\obj\Debug\WebAngularJS.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\SOLID_SRP_UnitTest-master\WebAngularJS\obj\Debug\WebAngularJS.pdb
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\ApplicationInsights.config
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\csc.exe
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\vbc.exe
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\WebAngularJS.dll.config
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\WebAngularJS.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\WebAngularJS.pdb
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.Web.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.Web.xml
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\obj\Debug\WebAngularJS.csprojResolveAssemblyReference.cache
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\obj\Debug\WebAngularJS.dll
+C:\Users\Lab\Desktop\SOLID_SRP_UnitTest-master\WebAngularJS\obj\Debug\WebAngularJS.pdb
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\ApplicationInsights.config
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\roslyn\csc.exe
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\roslyn\System.Collections.Immutable.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\roslyn\System.Reflection.Metadata.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\roslyn\vbc.exe
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\roslyn\VBCSCompiler.exe
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\roslyn\VBCSCompiler.exe.config
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\WebAngularJS.dll.config
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\WebAngularJS.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\WebAngularJS.pdb
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\Microsoft.AI.DependencyCollector.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\Microsoft.AI.Web.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\Microsoft.AI.WindowsServer.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\Microsoft.ApplicationInsights.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\Microsoft.AI.DependencyCollector.xml
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\Microsoft.AI.Web.xml
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\Microsoft.AI.WindowsServer.xml
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\Microsoft.ApplicationInsights.xml
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\obj\Debug\WebAngularJS.csprojResolveAssemblyReference.cache
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\obj\Debug\WebAngularJS.dll
+D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\obj\Debug\WebAngularJS.pdb
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\obj\Debug\WebAngularJS.csprojResolveAssemblyReference.cache
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\csc.exe
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\vbc.exe
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\ApplicationInsights.config
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\WebAngularJS.dll.config
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\WebAngularJS.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\WebAngularJS.pdb
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.AI.Web.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\System.Web.Http.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\System.Net.Http.Formatting.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Newtonsoft.Json.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\System.Web.Http.WebHost.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.AI.Web.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\System.Web.Http.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\System.Net.Http.Formatting.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Newtonsoft.Json.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\System.Web.Http.WebHost.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\obj\Debug\WebAngularJS.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\obj\Debug\WebAngularJS.pdb

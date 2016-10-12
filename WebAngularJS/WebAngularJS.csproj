@@ -116,10 +116,10 @@
     <Content Include="app\controllers\TipoServicoController.js" />
     <Content Include="app\controllers\SenhaController.js" />
     <Content Include="Global.asax" />
-    <Content Include="TipoServico.html" />
-    <Content Include="Servico.html" />
-    <Content Include="Supermercado.html" />
-    <Content Include="Senha.html" />
+    <Content Include="app\template\TipoServico.html" />
+    <Content Include="app\template\Servico.html" />
+    <Content Include="app\template\Supermercado.html" />
+    <Content Include="app\template\Senha.html" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
@@ -144,7 +144,7 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="index.html" />
+    <Content Include="app\template\index.html" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\angular-mocks.js" />
@@ -173,7 +173,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\template\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>

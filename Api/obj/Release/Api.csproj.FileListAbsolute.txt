@@ -48,3 +48,4 @@ C:\Users\Teste\Documents\Visual Studio 2015\Projects\NoQueue\Api\bin\EntityFrame
 C:\Users\Teste\Documents\Visual Studio 2015\Projects\NoQueue\Api\obj\Release\Api.csprojResolveAssemblyReference.cache
 C:\Users\Teste\Documents\Visual Studio 2015\Projects\NoQueue\Api\obj\Release\Api.dll
 C:\Users\Teste\Documents\Visual Studio 2015\Projects\NoQueue\Api\obj\Release\Api.pdb
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\Api\bin\XmlDocument.XML

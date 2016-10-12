@@ -3,6 +3,7 @@ using WebActivatorEx;
 using Swashbuckle.Application;
 using System;
 using Api;
+using System.Globalization;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -13,7 +14,7 @@ namespace Api
         public static void Register()
         {
             var thisAssembly = typeof(SwaggerConfig).Assembly;
-
+            
             GlobalConfiguration.Configuration
                 .EnableSwagger(c =>
                 {
@@ -21,7 +22,7 @@ namespace Api
                     // However, there may be situations (e.g. proxy and load-balanced environments) where this does not
                     // resolve correctly. You can workaround this by providing your own code to determine the root URL.
                     //
-                    //c.RootUrl(req => GetRootUrlFromAppConfig());
+                    //c.RootUrl(req => GetRootUrlFromAppConfig("/swagger"));
 
                     // If schemes are not explicitly provided in a Swagger 2.0 document, then the scheme used to access
                     // the docs is taken as the default. If your API supports multiple schemes and you want to be explicit
@@ -246,7 +247,8 @@ namespace Api
 
         private static string GetXmlCommentsPath()
         {
-            return System.String.Format(@"{0}\App_Data\XmlDocument.XML", System.AppDomain.CurrentDomain.BaseDirectory);
+            //return System.String.Format(@"{0}\App_Data\XmlDocument.XML", System.AppDomain.CurrentDomain.BaseDirectory);
+            return System.String.Format(CultureInfo.InvariantCulture, @"{0}\Bin\XmlDocument.xml", System.AppDomain.CurrentDomain.BaseDirectory);
         }
     }
 }

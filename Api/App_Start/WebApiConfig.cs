@@ -1,29 +1,4 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Web.Http;
-
-//namespace Api
-//{
-//    public static class WebApiConfig
-//    {
-//        public static void Register(HttpConfiguration config)
-//        {
-//            // Web API configuration and services
-
-//            // Web API routes
-//            config.MapHttpAttributeRoutes();
-
-//            config.Routes.MapHttpRoute(
-//                name: "DefaultApi",
-//                routeTemplate: "api/{controller}/{id}",
-//                defaults: new { id = RouteParameter.Optional }
-//            );
-//        }
-//    }
-//}
-
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
@@ -46,8 +21,8 @@ namespace Api
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                name: "NoQueueApi",
+                routeTemplate: "api/v1/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
 

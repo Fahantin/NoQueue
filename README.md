@@ -1,7 +1,6 @@
 # NoQueue
-
-Link do Repositório no GitHub: https://github.com/Fahantin/NoQueue
-Link da Aplicação no Azure: http://no-queue.azurewebsites.net
+* Link do Repositório no GitHub: https://github.com/Fahantin/NoQueue
+* Link da Aplicação no Azure: http://no-queue.azurewebsites.net
 
 # Detalhes da aplicação
 

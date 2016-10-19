@@ -97,20 +97,33 @@ D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\bin\Microsoft.Cod
 D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\obj\Debug\WebAngularJS.csprojResolveAssemblyReference.cache
 D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\obj\Debug\WebAngularJS.dll
 D:\Área de Trabalho\SOLID_SRP_UnitTest-master OA\WebAngularJS\obj\Debug\WebAngularJS.pdb
-C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\obj\Debug\WebAngularJS.csprojResolveAssemblyReference.cache
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\ApplicationInsights.config
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\csc.exe
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\csc.exe.config
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\csc.rsp
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\csi.exe
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\csi.rsp
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\System.AppContext.dll
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\System.IO.FileSystem.Primitives.dll
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\System.Reflection.Metadata.dll
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\vbc.exe
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\vbc.exe.config
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\vbc.rsp
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\VBCSCompiler.exe
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\ApplicationInsights.config
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\WebAngularJS.dll.config
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\WebAngularJS.dll
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\WebAngularJS.pdb
@@ -122,9 +135,9 @@ C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Mi
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.AI.WindowsServer.dll
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.ApplicationInsights.dll
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\System.Web.Http.dll
-C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\System.Net.Http.Formatting.dll
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Newtonsoft.Json.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\System.Net.Http.Formatting.dll
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\System.Web.Http.dll
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\System.Web.Http.WebHost.dll
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.AI.DependencyCollector.xml
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.AI.ServerTelemetryChannel.xml
@@ -132,9 +145,10 @@ C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Mi
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.ApplicationInsights.xml
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\System.Web.Http.xml
-C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\System.Net.Http.Formatting.xml
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\Newtonsoft.Json.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\System.Net.Http.Formatting.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\System.Web.Http.xml
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\bin\System.Web.Http.WebHost.xml
+C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\obj\Debug\WebAngularJS.csprojResolveAssemblyReference.cache
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\obj\Debug\WebAngularJS.dll
 C:\Users\Teste\documents\visual studio 2015\Projects\NoQueue\WebAngularJS\obj\Debug\WebAngularJS.pdb

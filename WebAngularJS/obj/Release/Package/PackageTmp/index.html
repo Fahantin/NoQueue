@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html ng-app="app" lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="scripts/angular.min.js"></script>
+    <script src="app/main.js"></script>
+    <script src="app/controllers/UsuarioController.js"></script>
+    <title>NoQueue - Painel de Controle</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">NoQueue</a>
+            </div>
+            
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-shopping-cart"></i> Supermercados <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="/app/template/Supermercado.html">Lista de Supermercados</a>
+                            </li>
+                            <li>
+                                <a href="#">Buscar Supermercado</a>
+                            </li>
+                        </ul>
+                    </li>
+                    </li>
+                    <li class="active">
+                        <a href="index.html"><i class="fa fa-fw fa-users"></i> Usuários</a>
+                    </li>
+                    <li>
+                        <a href="/app/template/Senha.html"><i class="fa fa-fw fa-ticket"></i> Senhas</a>
+                    </li>
+                    <li>
+                        <a href="/app/template/TipoServico.html"><i class="fa fa-fw fa-wrench"></i> Tipo de Serviço</a>
+                    </li>
+                    <li>
+                        <a href="/app/template/Servico.html"><i class="fa fa-fw fa-cubes"></i> Serviços</a>
+                    </li>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Usuários
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i>  <a href="index.html">NoQueue</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-users"></i> Usuários
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- /.row -->
+                
+                <!-- table -->
+                <div class="col-lg-6">
+                    <h2>Lista de Usuários</h2>
+                    <div class="table-responsive" ng-controller="UsuarioController">
+                        <table class="table table-bordered table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Latitude</th>
+                                    <th>Longitude</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="r in retorno">
+                                    <td>{{ r.id }}</td>
+                                    <td>{{ r.lat }}</td>
+                                    <td>{{ r.lng }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- FORM -->
+                    <h2>Adicionar Usuário</h2>
+                    <form ng-controller="UsuarioController" ng-submit="UsuarioAdd()" role="form">
+                        <div class="form-group">
+                            <label class="control-label">Latitude</label>
+                            <input type="text" class="form-control" ng-model="userLatitude" id="latitude">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Longitude</label>
+                            <input type="text" class="form-control" ng-model="userLongitude" id="longitude">
+                        </div>
+                        <center>
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </center>
+                    </form>          
+                    <!-- /FORM -->
+
+
+                    <!-- FORM -->
+                    <h2>Deletar Usuário</h2>
+                    <form ng-controller="UsuarioController" ng-submit="UsuarioDel()" role="form">
+                        <div class="form-group">
+                            <label class="control-label">Id</label>
+                            <input type="text" class="form-control" ng-model="userIdDel" id="id">
+                        </div>
+                        <center>
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </center>
+                    </form>
+                    <!-- /FORM -->
+
+                </div>
+                <!-- /table -->
+                <!-- /button -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+</body>
+</html>

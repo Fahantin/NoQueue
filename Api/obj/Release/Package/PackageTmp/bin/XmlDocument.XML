@@ -709,7 +709,7 @@
             <response code="400">Solicitação imprópria (Bad Request)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
-        <member name="M:Domain.Controllers.UsuarioController.GetId(System.Int32)">
+        <member name="M:Domain.Controllers.UsuarioController.GetId(System.String)">
             <summary>
             Listar Usuário
             </summary>
@@ -754,7 +754,7 @@
             <response code="400">Solicitação imprópria (Bad Request)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
-        <member name="M:Domain.Controllers.UsuarioController.Delete(System.Int32)">
+        <member name="M:Domain.Controllers.UsuarioController.Delete(System.String)">
             <summary>
             Deletar Usuário
             </summary>

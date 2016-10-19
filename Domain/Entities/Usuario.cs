@@ -13,7 +13,7 @@ namespace Domain.Entities
     {
         //[Key]
         [Required]
-        public int Id { get; set; }
+        public String Id { get; set; }
 
         //[MaxLength(20)]
         [Required]
@@ -28,7 +28,7 @@ namespace Domain.Entities
 
         }
 
-        public Usuario(int id, double lat, double lng)
+        public Usuario(String id, double lat, double lng)
         {
             this.Id = id;
             this.Lat = lat;

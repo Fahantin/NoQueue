@@ -9,12 +9,13 @@ using System.Web.Http.Description;
 
 namespace Domain.Controllers
 {
+    [RoutePrefix("api/v1/Usuario")]
     public class UsuarioController : ApiController
     {
         //private Usuario db = new UsuarioContext();
 
         static List<Usuario> _usuarios = new List<Usuario> {
-            new Usuario(){Id=1,Lat=22.15,Lng=-22.37}
+            new Usuario(){Id="1",Lat=22.15,Lng=-22.37}
         };
 
 
@@ -49,7 +50,7 @@ namespace Domain.Controllers
         /// <response code="404">Não Encontrado (Not Found)</response>
         /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         [ResponseType(typeof(Usuario))]
-        public IHttpActionResult GetId(int id)
+        public IHttpActionResult GetId(String id)
         {
             Usuario user = _usuarios.Find(x => x.Id == id);
 
@@ -85,17 +86,20 @@ namespace Domain.Controllers
         /// <response code="400">Solicitação imprópria (Bad Request)</response>
         /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         [ResponseType(typeof(Usuario))]
-        public HttpResponseMessage Post([FromBody]Usuario usuario)
-        {
+        public IHttpActionResult Post(Usuario usuario){
+
+            var uuid = Guid.NewGuid().ToString();
+
+            usuario.Id = uuid;
+          
             if (usuario != null)
             {
                 _usuarios.Add(usuario);
-                var msg = new HttpResponseMessage(HttpStatusCode.Created);
-                return msg;
+                return Ok(usuario);
             }
             else
             {
-                throw new HttpResponseException(HttpStatusCode.Conflict);
+                return NotFound();
             }
         }
 
@@ -112,9 +116,9 @@ namespace Domain.Controllers
         /// <response code="400">Solicitação imprópria (Bad Request)</response>
         /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         [ResponseType(typeof(Usuario))]
-        public IHttpActionResult Put(int id, Usuario usuario)
+        public IHttpActionResult Put(String id, Usuario usuario)
         {
-            Usuario user = _usuarios.Find(x => x.Id == id);
+            Usuario user = _usuarios.Find(x => x.Id.Equals(id));
 
             if (user != null)
             {
@@ -125,7 +129,6 @@ namespace Domain.Controllers
             }
             else
             {
-                //throw new HttpResponseException(HttpStatusCode.NotFound);
                 return NotFound();
             }
         }
@@ -143,18 +146,15 @@ namespace Domain.Controllers
         /// <response code="400">Solicitação imprópria (Bad Request)</response>
         /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         [ResponseType(typeof(Usuario))]
-        // DELETE api/values
-        public IHttpActionResult Delete(int id)
+        public IHttpActionResult Delete(String id)
         {
             if (id != null)
             {
-                //return new HttpResponseMessage(HttpStatusCode.OK);
-                _usuarios = _usuarios.Where(note => note.Id != id).ToList();
+                _usuarios = _usuarios.Where(note => !(note.Id.Equals(id))).ToList();
                 return Ok();
             }
             else
             {
-                //throw new HttpResponseException(HttpStatusCode.NotFound);
                 return NotFound();
             }
         }

@@ -12,9 +12,10 @@ namespace Domain.Controllers
 {
     public class TipoServicoController : ApiController
     {
-        static List<TipoServico> _tipos = new List<TipoServico> {
-            new TipoServico(){Id=1,Nome="Açougue"}
+        static List<TipoServico> _tipoServico = new List<TipoServico> {
+            new TipoServico(){Id="1",Nome="Açougue"}
         };
+
 
         //GET
         /// <summary>
@@ -25,11 +26,39 @@ namespace Domain.Controllers
         /// <param name="Nome">Nome do Tipo de Serviço</param>
         /// <response code="200">OK</response>
         /// <response code="400">Solicitação imprópria (Bad Request)</response>
+        /// <response code="404">Não Encontrado (Not Found)</response>
         /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         [ResponseType(typeof(TipoServico))]
         public IHttpActionResult Get()
         {
-            return Ok(_tipos);
+            return Ok(_tipoServico);
+        }
+
+
+        //GET ID
+        /// <summary>
+        /// Listar Tipo de Serviço
+        /// </summary>
+        /// <param name="Tipo Servico">Tipo Serviço Modelo</param>
+        /// <param name="Id">Id do Tipo de Serviço</param>
+        /// <param name="Nome">Nome do Tipo de Serviço</param>
+        /// <response code="200">OK</response>
+        /// <response code="400">Solicitação imprópria (Bad Request)</response>
+        /// <response code="404">Não Encontrado (Not Found)</response>
+        /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
+        [ResponseType(typeof(TipoServico))]
+        public IHttpActionResult GetId(String id)
+        {
+            TipoServico TipoServico = _tipoServico.Find(x => x.Id == id);
+
+            if (TipoServico != null)
+            {
+                return Ok(TipoServico);
+            }
+            else
+            {
+                return NotFound();
+            }
         }
 
 
@@ -42,26 +71,58 @@ namespace Domain.Controllers
         /// <param name="Nome">Nome do Tipo de Serviço</param>
         /// <remarks>/POST
         /// {
-        ///     "id": 1;
-        ///     "name": Açougue;
+        ///     "Id": 1,
+        ///     "Nome": Açougue
         ///  }
         /// </remarks>
         /// <response code="200">OK</response>
         /// <response code="201">Criado</response>
         /// <response code="400">Solicitação imprópria (Bad Request)</response>
+        /// <response code="404">Não Encontrado (Not Found)</response>
         /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         [ResponseType(typeof(TipoServico))]
-        public HttpResponseMessage Post([FromBody]TipoServico tipoServico)
+        public IHttpActionResult Post(TipoServico TipoServico)
         {
-            if (tipoServico != null)
+            var uuid = Guid.NewGuid().ToString();
+
+            TipoServico.Id = uuid;
+
+            if (TipoServico != null)
             {
-                _tipos.Add(tipoServico);
-                var msg = new HttpResponseMessage(HttpStatusCode.Created);
-                return msg;
+                _tipoServico.Add(TipoServico);
+                return Ok(TipoServico);
             }
             else
             {
-                throw new HttpResponseException(HttpStatusCode.Conflict);
+                return NotFound();
+            }
+        }
+
+
+        //PUT
+        /// <summary>
+        /// Atualizar Tipo de Serviço
+        /// </summary>
+        /// <param name="Tipo Servico">Tipo Serviço Modelo</param>
+        /// <param name="Id">Id do Tipo de Serviço</param>
+        /// <param name="Nome">Nome do Tipo de Serviço</param>
+        /// <response code="200">OK</response>
+        /// <response code="400">Solicitação imprópria (Bad Request)</response>
+        /// <response code="404">Não Encontrado (Not Found)</response>
+        /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
+        [ResponseType(typeof(TipoServico))]
+        public IHttpActionResult Put(String id, TipoServico TipoServico)
+        {
+            TipoServico NovoTipoServico = _tipoServico.Find(x => x.Id.Equals(id));
+
+            if (NovoTipoServico != null)
+            {
+                NovoTipoServico.Nome = TipoServico.Nome;
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
             }
         }
 
@@ -75,20 +136,18 @@ namespace Domain.Controllers
         /// <param name="Nome">Nome do Tipo de Serviço</param>
         /// <response code="200">OK</response>
         /// <response code="400">Solicitação imprópria (Bad Request)</response>
+        /// <response code="404">Não Encontrado (Not Found)</response>
         /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         [ResponseType(typeof(TipoServico))]
-        // DELETE api/values
-        public IHttpActionResult Delete(int id)
+        public IHttpActionResult Delete(String id)
         {
             if (id != null)
             {
-                //return new HttpResponseMessage(HttpStatusCode.OK);
-                _tipos = _tipos.Where(note => note.Id != id).ToList();
+                _tipoServico = _tipoServico.Where(note => !(note.Id.Equals(id))).ToList();
                 return Ok();
             }
             else
             {
-                //throw new HttpResponseException(HttpStatusCode.NotFound);
                 return NotFound();
             }
         }

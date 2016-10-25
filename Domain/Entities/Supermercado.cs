@@ -8,7 +8,7 @@ namespace Domain.Entities
 {
     public class Supermercado
     {
-        public int Id { get; set; }
+        public String Id { get; set; }
         public String Nome { get; set; }
         public double Lat { get; set; }
         public double Lng { get; set; }
@@ -18,7 +18,7 @@ namespace Domain.Entities
 
         }
 
-        public Supermercado(int id, String nome, double lat, double lng)
+        public Supermercado(String id, String nome, double lat, double lng)
         {
             this.Id = id;
             this.Nome = nome;

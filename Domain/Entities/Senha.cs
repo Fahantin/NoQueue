@@ -12,13 +12,13 @@ namespace Domain.Entities
     public class Senha
     {
         //[Key]
-        public int Id { get; set; }
+        public String Id { get; set; }
 
         //[ForeignKey]
-        public int IdServico { get; set; }
+        public String IdServico { get; set; }
 
         //[ForeignKey]
-        public int IdUsuario { get; set; }
+        public String IdUsuario { get; set; }
 
         //[MaxLength(4)]
         public int SenhaUsuario { get; set; }
@@ -28,7 +28,7 @@ namespace Domain.Entities
 
         }
 
-        public Senha(int idServico, int idUsuario)
+        public Senha(String idServico, String idUsuario)
         {
             this.IdServico = idServico;
             this.IdUsuario = idUsuario;

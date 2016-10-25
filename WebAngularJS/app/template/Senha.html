@@ -1,32 +1,197 @@
 ﻿<!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="app" lang="pt-br">
 <head>
-    <title>Senha Controller</title>
-	<meta charset="utf-8" />
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <script src="/scripts/jquery-1.9.1.min.js"></script>
-    <script src="/scripts/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <script src="/scripts/angular.min.js"></script>
     <script src="/app/main.js"></script>
     <script src="/app/controllers/SenhaController.js"></script>
+    <title>NoQueue - Tipos de Serviços</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/css/sb-admin.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-    <div class="container">
-        <div class="jumbotron" ng-controller="SenhaController">        
-            <table class="table table-responsive table-striped">
-                    <th>Id</th>
-                    <th>Id do Serviço</th>
-                    <th>Id do Usuário</th>
-                    <th>Senha do Usuário</th>
-                </tr>
-                <tr ng-repeat="r in retorno">
-                    <td>{{ r.id }}</td>
-                    <td>{{ r.idServico }}</td>
-                    <td>{{ r.idUsuario }}</td>
-                    <td>{{ r.senhaUsuario }}</td>
-                </tr>
-            </table>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">NoQueue</a>
+            </div>
+
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="/index.html"><i class="fa fa-fw fa-users"></i> Usuários</a>
+                    </li>
+                    <li class="active">
+                        <a href="/app/template/Senha.html"><i class="fa fa-fw fa-ticket"></i> Senhas</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#supermercado"><i class="fa fa-fw fa-shopping-cart"></i> Supermercados <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="supermercado" class="collapse">
+                            <li>
+                                <a href="/app/template/Supermercado.html"><i class="fa fa-fw fa-bars"></i> Lista</a>
+                            </li>
+                            <li>
+                                <a href="/app/template/SupermercadoCad.html"><i class="fa fa-fw fa-plus"></i> Cadastrar</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#servico"><i class="fa fa-fw fa-cubes"></i> Serviço <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="servico" class="collapse">
+                            <li>
+                                <a href="/app/template/Servico.html"><i class="fa fa-fw fa-bars"></i> Lista</a>
+                            </li>
+                            <li>
+                                <a href="/app/template/ServicoCad.html"><i class="fa fa-fw fa-plus"></i> Cadastrar</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#tiposervico"><i class="fa fa-fw fa-wrench"></i> Tipo de Serviço <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="tiposervico" class="collapse">
+                            <li>
+                                <a href="/app/template/TipoServico.html"><i class="fa fa-fw fa-bars"></i> Lista</a>
+                            </li>
+                            <li>
+                                <a href="/app/template/TipoServicoCad.html"><i class="fa fa-fw fa-plus"></i> Cadastrar</a>
+                            </li>
+                        </ul>
+                    </li>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Senhas
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i>  <a href="index.html">NoQueue</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-ticket"></i> Senhas
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- /.row -->
+                <!-- table -->
+                <div class="col-lg-6">
+                    <h2>Lista de Senhas</h2>
+                    <div class="table-responsive" ng-controller="SenhaController">
+                        <table class="table table-bordered table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Id do Serviço</th>
+                                    <th>Id do Usuário</th>
+                                    <th>Senha do Usuário</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="r in retorno">
+                                    <td>{{ r.id }}</td>
+                                    <td>{{ r.idServico }}</td>
+                                    <td>{{ r.idUsuario }}</td>
+                                    <td>{{ r.senhaUsuario }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- FORM ADD -->
+                    <h2>Adicionar Senha</h2>
+                    <form ng-controller="SenhaController" role="form">
+                        <div class="form-group">
+                            <label class="control-label">Id do Serviço</label>
+                            <input type="text" class="form-control" ng-model="senhaIdServico" id="senhaIdServico">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Id do Usuário</label>
+                            <input type="text" class="form-control" ng-model="senhaIdUsuario" id="senhaIdUsuario">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Senha do Usuário</label>
+                            <input type="text" class="form-control" ng-model="senhaUsuario" id="senhaUsuario">
+                        </div>
+                        <center>
+                            <button type="submit" ng-click="SenhaAdd()" class="btn btn-primary">Adicionar</button>
+                        </center>
+                    </form>
+                    <!-- /FORM -->
+                    <!-- FORM UPDATE-->
+                    <h2>Atualizar Senha</h2>
+                    <form ng-controller="SenhaController" role="form">
+                        <div class="form-group">
+                            <label class="control-label">Id da Senha</label>
+                            <input type="text" class="form-control" ng-model="senhaId" id="senhaId">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Id do Serviço</label>
+                            <input type="text" class="form-control" ng-model="senhaIdServico" id="senhaIdServico">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Id do Usuário</label>
+                            <input type="text" class="form-control" ng-model="senhaIdUsuario" id="senhaIdUsuario">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Senha do Usuário</label>
+                            <input type="text" class="form-control" ng-model="senhaUsuario" id="senhaUsuario">
+                        </div>
+                        <center>
+                            <button type="submit" ng-click="SenhaUpdate()" class="btn btn-success">Atualizar</button>
+                        </center>
+                    </form>
+                    <!-- /FORM -->
+                    <!-- FORM DELETE-->
+                    <h2>Deletar Senha</h2>
+                    <form ng-controller="SenhaController" role="form">
+                        <div class="form-group">
+                            <label class="control-label">Id da Senha</label>
+                            <input type="text" class="form-control" ng-model="senhaId" id="senhaId">
+                        </div>
+                        <center>
+                            <button type="submit" ng-click="SenhaDelete()" class="btn btn-danger">Deletar</button>
+                        </center>
+                    </form>
+                    <!-- /FORM -->
+                </div>
+                <!-- /table -->
+                <!-- /button -->
+            </div>
+            <!-- /.container-fluid -->
         </div>
+        <!-- /#page-wrapper -->
     </div>
+    <!-- /#wrapper -->
 </body>
 </html>
+

@@ -14,7 +14,7 @@
     <script src="/scripts/angular.min.js"></script>
     <script src="/app/main.js"></script>
     <!-- Controller AngularJS -->
-    <script src="/app/controllers/TipoServicoController.js"></script>
+    <script src="/app/controllers/ServicoController.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -28,7 +28,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body ng-controller="TipoServicoController">
+<body ng-controller="ServicoController">
     <!-- WRAPPER -->
     <div id="wrapper">
         <!-- NAVBAR -->
@@ -66,7 +66,7 @@
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#servico"><i class="fa fa-fw fa-cubes"></i> Serviço <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="servico" class="collapse">
+                        <ul id="servico" class="collapse in">
                             <li>
                                 <a href="/app/template/Servico.html"><i class="fa fa-fw fa-bars"></i> Lista</a>
                             </li>
@@ -77,7 +77,7 @@
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#tiposervico"><i class="fa fa-fw fa-wrench"></i> Tipo de Serviço <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="tiposervico" class="collapse in">
+                        <ul id="tiposervico" class="collapse">
                             <li>
                                 <a href="/app/template/TipoServico.html"><i class="fa fa-fw fa-bars"></i> Lista</a>
                             </li>
@@ -98,81 +98,56 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Tipos de Serviços
+                            Serviços
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <a href="index.html">NoQueue</a>
                             </li>
                             <li class="active">
-                                Tipos de Serviços
+                                Serviços
                             </li>
                         </ol>
                     </div>
                 </div>
                 <!-- /CONTENT-HEAD -->
-                <!-- TABLE -->
+                <!-- FORM ADD -->
                 <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading"><center><h3>Lista de Tipos de Serviços</h3></center></div>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>Id</th>
-                                        <th>Nome</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="r in retorno">
-                                        <td>{{ r.id }}</td>
-                                        <td>{{ r.nome }}</td>
-                                </tbody>
-                            </table>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <center>
+                                <h3>Cadastrar Serviço</h3>
+                            </center>
                         </div>
-                    </div>
-                </div>
-                <!-- /TABLE -->
-                <!-- FORM UPDATE-->
-                <div class="col-lg-6">
-                    <div class="panel panel-success">
-                        <div class="panel-heading"><center><h3>Atualizar Tipo de Serviço</h3></center></div>
                         <div class="panel-body">
                             <form role="form">
                                 <div class="form-group">
-                                    <label class="control-label">Id do Tipo de Serviço</label>
-                                    <input type="text" class="form-control" ng-model="updId" id="updId">
+                                    <label class="control-label">Id do Supermercado</label>
+                                    <input type="text" class="form-control" ng-model="cadIdSupermercado" id="cadIdSupermercado">
                                 </div>
+
                                 <div class="form-group">
-                                    <label class="control-label">Nome</label>
-                                    <input type="text" class="form-control" ng-model="updNome" id="updNome">
+                                    <label class="control-label">Id do Tipo de Serviço</label>
+                                    <input type="text" class="form-control" ng-model="cadIdTipoServico" id="cadIdTipoServico">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Senha Atual</label>
+                                    <input type="text" class="form-control" ng-model="cadAtualSenha" id="cadAtualSenha">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Próxima Senha</label>
+                                    <input type="text" class="form-control" ng-model="cadProxSenha" id="cadProxSenha">
                                 </div>
                                 <center>
-                                    <button type="submit" class="btn btn-success" ng-click="TipoServicoUpdate()">Atualizar</button>
+                                    <button type="submit" ng-click="ServicoAdd()" class="btn btn-primary">Adicionar</button>
                                 </center>
                             </form>
                         </div>
                     </div>
                 </div>
-                <!-- /UPDATE -->
-                <!-- FORM DELETE-->
-                <div class="col-lg-6">
-                    <div class="panel panel-danger">
-                        <div class="panel-heading"><center><h3>Deletar Tipo de Serviço</h3></center></div>
-                        <div class="panel-body">
-                            <form role="form">
-                                <div class="form-group">
-                                    <label class="control-label">Id do Tipo de Serviço</label>
-                                    <input type="text" class="form-control" ng-model="delId" id="delId">
-                                </div>
-                                <center>
-                                    <button type="submit" class="btn btn-danger" ng-click="TipoServicoDelete()">Deletar</button>
-                                </center>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- /DELETE -->
+                <!-- /FORM -->
             </div>
         </div>
         <!-- /.container-fluid -->

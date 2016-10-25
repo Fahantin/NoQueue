@@ -9,7 +9,9 @@ using System.Web.Http.Description;
 
 namespace Domain.Controllers
 {
-    [RoutePrefix("api/v1/Usuario")]
+    /// <summary>
+    /// Usuário Controller
+    /// </summary>
     public class UsuarioController : ApiController
     {
         //private Usuario db = new UsuarioContext();
@@ -29,6 +31,7 @@ namespace Domain.Controllers
         /// <param name="Lng">Longitude do Usuário</param>
         /// <response code="200">OK</response>
         /// <response code="400">Solicitação imprópria (Bad Request)</response>
+        /// <response code="404">Não Encontrado (Not Found)</response>
         /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         [ResponseType(typeof(Usuario))]
         public IHttpActionResult Get()
@@ -47,20 +50,18 @@ namespace Domain.Controllers
         /// <param name="Lng">Longitude do Usuário</param>
         /// <response code="200">OK</response>
         /// <response code="400">Solicitação imprópria (Bad Request)</response>
-        /// <response code="404">Não Encontrado (Not Found)</response>
         /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         [ResponseType(typeof(Usuario))]
         public IHttpActionResult GetId(String id)
         {
-            Usuario user = _usuarios.Find(x => x.Id == id);
+            Usuario Usuario = _usuarios.Find(x => x.Id == id);
 
-            if (user != null)
+            if (Usuario != null)
             {
-                return Ok(user);
+                return Ok(Usuario);
             }
             else
             {
-                //throw new HttpResponseException(HttpStatusCode.NotFound);
                 return NotFound();
             }
         }
@@ -76,26 +77,27 @@ namespace Domain.Controllers
         /// <param name="Lng">Longitude do Usuário</param>
         /// <remarks>/POST
         /// {
-        ///     "id": 1;
-        ///     "lat": 22.10;
-        ///     "lng": -23.10;
+        ///     "Id": 1,
+        ///     "Lat": 22.10,
+        ///     "Lng": -23.10
         ///  }
         /// </remarks>
         /// <response code="200">OK</response>
         /// <response code="201">Criado</response>
         /// <response code="400">Solicitação imprópria (Bad Request)</response>
+        /// <response code="404">Não Encontrado (Not Found)</response>
         /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         [ResponseType(typeof(Usuario))]
-        public IHttpActionResult Post(Usuario usuario){
-
+        public IHttpActionResult Post(Usuario Usuario)
+        {
             var uuid = Guid.NewGuid().ToString();
 
-            usuario.Id = uuid;
-          
-            if (usuario != null)
+            Usuario.Id = uuid;
+
+            if (Usuario != null)
             {
-                _usuarios.Add(usuario);
-                return Ok(usuario);
+                _usuarios.Add(Usuario);
+                return Ok(Usuario);
             }
             else
             {
@@ -114,18 +116,18 @@ namespace Domain.Controllers
         /// <param name="Lng">Longitude do Usuário</param>
         /// <response code="200">OK</response>
         /// <response code="400">Solicitação imprópria (Bad Request)</response>
+        /// <response code="404">Não Encontrado (Not Found)</response>
         /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         [ResponseType(typeof(Usuario))]
-        public IHttpActionResult Put(String id, Usuario usuario)
+        public IHttpActionResult Put(String id, Usuario Usuario)
         {
-            Usuario user = _usuarios.Find(x => x.Id.Equals(id));
+            Usuario NovoUsuario = _usuarios.Find(x => x.Id.Equals(id));
 
-            if (user != null)
+            if (NovoUsuario != null)
             {
-                user.Id = usuario.Id;
-                user.Lat = usuario.Lat;
-                user.Lng = usuario.Lng;
-                return Ok(_usuarios);
+                NovoUsuario.Lat = Usuario.Lat;
+                NovoUsuario.Lng = Usuario.Lng;
+                return Ok();
             }
             else
             {
@@ -144,6 +146,7 @@ namespace Domain.Controllers
         /// <param name="Lng">Longitude do Usuário</param>
         /// <response code="200">OK</response>
         /// <response code="400">Solicitação imprópria (Bad Request)</response>
+        /// <response code="404">Não Encontrado (Not Found)</response>
         /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         [ResponseType(typeof(Usuario))]
         public IHttpActionResult Delete(String id)

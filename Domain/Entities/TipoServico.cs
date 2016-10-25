@@ -8,7 +8,7 @@ namespace Domain.Entities
 {
     public class TipoServico
     {
-        public int Id { get; set; }
+        public String Id { get; set; }
         public String Nome { get; set; }
 
         public TipoServico()
@@ -16,7 +16,7 @@ namespace Domain.Entities
 
         }
 
-        public TipoServico(int id, String nome)
+        public TipoServico(String id, String nome)
         {
             this.Id = id;
             this.Nome = nome;

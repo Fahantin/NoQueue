@@ -1,33 +1,194 @@
 ﻿<!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="app" lang="pt-br">
 <head>
-    <title>Supermercado Controller</title>
-	<meta charset="utf-8" />
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <script src="/scripts/jquery-1.9.1.min.js"></script>
-    <script src="/scripts/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Thiago Fantim">
+
+    <title>NoQueue - Supermercados</title>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <script src="/scripts/angular.min.js"></script>
     <script src="/app/main.js"></script>
+    <!-- Controller AngularJS -->
     <script src="/app/controllers/SupermercadoController.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/css/sb-admin.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-    <div class="container">
-        <div class="jumbotron" ng-controller="SupermercadoController">        
-            <table class="table table-responsive table-striped">
-                <tr>
-                    <th>Id</th>
-                    <th>Nome</th>
-                    <th>Latitude</th>
-                    <th>Longitude</th>
-                </tr>
-                <tr ng-repeat="r in retorno">
-                    <td>{{ r.id }}</td>
-                    <td>{{ r.nome }}</td>
-                    <td>{{ r.lat }}</td>
-                    <td>{{ r.lng }}</td>
-                </tr>
-            </table>
+<body ng-controller="SupermercadoController">
+    <!-- WRAPPER -->
+    <div id="wrapper">
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- MENU-MOBILE -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/index.html">NoQueue</a>
+            </div>
+            <!-- /MENU-MOBILE -->
+            <!-- MENU -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="/index.html"><i class="fa fa-fw fa-users"></i> Usuários</a>
+                    </li>
+                    <li>
+                        <a href="/app/template/Senha.html"><i class="fa fa-fw fa-ticket"></i> Senhas</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#supermercado"><i class="fa fa-fw fa-shopping-cart"></i> Supermercados <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="supermercado" class="collapse in">
+                            <li>
+                                <a href="/app/template/Supermercado.html"><i class="fa fa-fw fa-bars"></i> Lista</a>
+                            </li>
+                            <li>
+                                <a href="/app/template/SupermercadoCad.html"><i class="fa fa-fw fa-plus"></i> Cadastrar</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#servico"><i class="fa fa-fw fa-cubes"></i> Serviço <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="servico" class="collapse">
+                            <li>
+                                <a href="/app/template/Servico.html"><i class="fa fa-fw fa-bars"></i> Lista</a>
+                            </li>
+                            <li>
+                                <a href="/app/template/ServicoCad.html"><i class="fa fa-fw fa-plus"></i> Cadastrar</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#tiposervico"><i class="fa fa-fw fa-wrench"></i> Tipo de Serviço <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="tiposervico" class="collapse">
+                            <li>
+                                <a href="/app/template/TipoServico.html"><i class="fa fa-fw fa-bars"></i> Lista</a>
+                            </li>
+                            <li>
+                                <a href="/app/template/TipoServicoCad.html"><i class="fa fa-fw fa-plus"></i> Cadastrar</a>
+                            </li>
+                        </ul>
+                    </li>
+            </div>
+            <!-- /MENU -->
+        </nav>
+        <!-- /NAVBAR -->
+        <!-- PAGE-WRAPPER -->
+        <div id="page-wrapper">
+            <!-- CONTAINER-FLUID -->
+            <div class="container-fluid">
+                <!-- CONTENT-HEAD -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Supermercados
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="index.html">NoQueue</a>
+                            </li>
+                            <li class="active">
+                                Supermercados
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- /CONTENT-HEAD -->
+                <!-- TABLE -->
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><center><h3>Lista de Supermercados</h3></center></div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Nome</th>
+                                        <th>Latitude</th>
+                                        <th>Longitude</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="r in retorno">
+                                        <td>{{ r.id }}</td>
+                                        <td>{{ r.nome }}</td>
+                                        <td>{{ r.lat }}</td>
+                                        <td>{{ r.lng }}</td>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- /TABLE -->
+                <!-- FORM UPDATE-->
+                <div class="col-lg-6">
+                    <div class="panel panel-success">
+                        <div class="panel-heading"><center><h3>Atualizar Supermercado</h3></center></div>
+                        <div class="panel-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label class="control-label">Id do Supermercado</label>
+                                    <input type="text" class="form-control" ng-model="updId" id="updId">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Nome</label>
+                                    <input type="text" class="form-control" ng-model="updNome" id="updNome">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Latitude</label>
+                                    <input type="text" class="form-control" ng-model="updLatitude" id="updLatitude">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Longitude</label>
+                                    <input type="text" class="form-control" ng-model="updLongitude" id="updLongitude">
+                                </div>
+                                <center>
+                                    <button type="submit" class="btn btn-success" ng-click="SupermercadoUpdate()">Atualizar</button>
+                                </center>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- /UPDATE -->
+                <!-- FORM DELETE-->
+                <div class="col-lg-6">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading"><center><h3>Deletar Supermercado</h3></center></div>
+                        <div class="panel-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label class="control-label">Id do Supermercado</label>
+                                    <input type="text" class="form-control" ng-model="delId" id="delId">
+                                </div>
+                                <center>
+                                    <button type="submit" class="btn btn-danger" ng-click="SupermercadoDelete()">Deletar</button>
+                                </center>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- /DELETE -->
+            </div>
         </div>
+        <!-- /.container-fluid -->
     </div>
+    <!-- /#page-wrapper -->
 </body>
 </html>

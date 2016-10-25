@@ -1,39 +1,97 @@
 ﻿angular.module("app")
-    .controller("UsuarioController",/*["$location", "$window",*/
-        function ($scope, $http/*, $location, $window*/) {
+    .controller("UsuarioController",
+        function ($scope, $http) {
+            $scope.retorno = [];
 
-            $http.get("http://localhost:55076/api/v1/Usuario")
+            //var buscar = function () {
+            $scope.UsuarioGet = function () {
+                $http.get("http://fahantin.azurewebsites.net/api/v1/Usuario")
                    .success(function (data) {
+                       console.log("Sucesso no GET");
                        $scope.retorno = data;
-                   });
+                   })
+                   .error(function (erro) {
+                       console.log("Deu erro no GET");
+                       console.log(erro);
+
+                   })
+                   .finally(function () { console.log("GET Finalizado"); });
+            }
+
+            function Apagar(x) {
+                if (x == 1) {
+                    $scope.cadLatitude = null;
+                    $scope.cadLongitude = null;
+                }
+                else if (x == 2) {
+                    $scope.updId = null;
+                    $scope.updLatitude = null;
+                    $scope.updLongitude = null;
+                }
+                else if (x == 3) {
+                    $scope.delId = null;
+                }
+            }
+
+            $scope.UsuarioGet();
 
             $scope.UsuarioAdd = function () {
 
-                var usuario = {
-                    "id": $scope.userId,
-                    "lat": $scope.userLatitude,
-                    "lng": $scope.userLongitude
+                var Usuario = {
+                    "Lat": $scope.cadLatitude,
+                    "Lng": $scope.cadLongitude
                 }
 
-                $http.post("http://localhost:55076/api/v1/Usuario", usuario)
+                $http.post("http://fahantin.azurewebsites.net/api/v1/Usuario", Usuario)
                    .success(function (data) {
-                       $scope.retorno = data;
-                       console.log(data);
-                       //$window.location.reload();
-                   });
+                       //$scope.retorno.add(Usuario);
+                       $scope.UsuarioGet();
+                       Apagar(1);
+                       console.log("POST Success");
+                   })
+                   .error(function (erro) {
+                       console.log("Deu erro no POST");
+                       console.log(erro);
+
+                   })
+                   .finally(function () { console.log("POST Finalizado"); });
             }
 
-            $scope.UsuarioDel = function () {
+            $scope.UsuarioUpdate = function () {
 
-                var id = $scope.userIdDel
+                var Usuario = {
+                    "Id": $scope.updId,
+                    "Lat": $scope.updLatitude,
+                    "Lng": $scope.updLongitude
+                }
 
-                $http.delete("http://localhost:55076/api/v1/Usuario", 1)
+                $http.put("http://fahantin.azurewebsites.net/api/v1/Usuario/" + $scope.updId, Usuario)
                    .success(function (data) {
-                       alert("Delete Successfull");
-                       $scope.retorno = data;
-                       console.log(data);
-                   });
+                       $scope.UsuarioGet();
+                       Apagar(2);
+                       console.log("POST Success");
+                   })
+                   .error(function (erro) {
+                       console.log("Deu erro no POST");
+                       console.log(erro);
+
+                   })
+                   .finally(function () { console.log("POST Finalizado"); });
+            }
+
+            $scope.UsuarioDelete = function () {
+                $http.delete("http://fahantin.azurewebsites.net/api/v1/Usuario/" + $scope.delId)
+                   .success(function (data) {
+                       $scope.UsuarioGet();
+                       Apagar(3);
+                       console.log("POST Success");
+                   })
+                   .error(function (erro) {
+                       console.log("Deu erro no POST");
+                       console.log(erro);
+
+                   })
+                   .finally(function () { console.log("POST Finalizado"); });
             }
 
         }/*]*/);
-

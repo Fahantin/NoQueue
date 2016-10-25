@@ -115,6 +115,9 @@
     <Content Include="app\controllers\SupermercadoController.js" />
     <Content Include="app\controllers\TipoServicoController.js" />
     <Content Include="app\controllers\SenhaController.js" />
+    <Content Include="app\template\ServicoCad.html" />
+    <Content Include="app\template\SupermercadoCad.html" />
+    <Content Include="app\template\TipoServicoCad.html" />
     <Content Include="css\bootstrap-rtl.css" />
     <Content Include="css\bootstrap-rtl.min.css" />
     <Content Include="css\plugins\morris.css" />
@@ -147,7 +150,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="scripts\angular.min.js.map" />
-    <None Include="Properties\PublishProfiles\no-queue.pubxml" />
+    <None Include="Properties\PublishProfiles\noq.pubxml" />
     <None Include="scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="scripts\jquery-3.1.1.js" />
     <Content Include="scripts\jquery-3.1.1.min.js" />

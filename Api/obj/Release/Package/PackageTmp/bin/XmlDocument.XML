@@ -492,9 +492,10 @@
             <param name="SenhaUsuario">Senha do Usuario</param>
             <response code="200">OK</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
-        <member name="M:Domain.Controllers.SenhaController.GetId(System.Int32)">
+        <member name="M:Domain.Controllers.SenhaController.GetId(System.String)">
             <summary>
             Listar Senha
             </summary>
@@ -519,19 +520,20 @@
             <param name="SenhaUsuario">Senha do Usuario</param>
             <remarks>/POST
             {
-               "id": 1;
-               "idSupermercado": 1;
-               "idTipoServico": 2;
-               "atualSenha": 20;
-               "proxSenha": 30;
+               "Id": 1,
+               "IdSupermercado": 1,
+               "IdTipoServico": 2,
+               "AtualSenha": 20,
+               "ProxSenha": 30
              }
             </remarks>
             <response code="200">OK</response>
             <response code="201">Criado</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
-        <member name="M:Domain.Controllers.SenhaController.Put(System.Int32,Domain.Entities.Senha)">
+        <member name="M:Domain.Controllers.SenhaController.Put(System.String,Domain.Entities.Senha)">
             <summary>
             Atualizar Senha
             </summary>
@@ -542,9 +544,10 @@
             <param name="SenhaUsuario">Senha do Usuario</param>
             <response code="200">OK</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
-        <member name="M:Domain.Controllers.SenhaController.Delete(System.Int32)">
+        <member name="M:Domain.Controllers.SenhaController.Delete(System.String)">
             <summary>
             Deletar Senha
             </summary>
@@ -555,6 +558,7 @@
             <param name="SenhaUsuario">Senha do Usuario</param>
             <response code="200">OK</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
         <member name="M:Domain.Controllers.ServicoController.Get">
@@ -565,10 +569,26 @@
             <param name="Id">Id do Serviço</param>
             <param name="IdSupermercado">Id do Supermercado</param>
             <param name="IdTipoServico">Id do Tipo de Serviço</param>
-            <param name="atualSenha">Atual Senha</param>
-            <param name="proxSenha">Próxima Senha</param>
+            <param name="AtualSenha">Atual Senha</param>
+            <param name="ProxSenha">Próxima Senha</param>
             <response code="200">OK</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
+            <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
+        </member>
+        <member name="M:Domain.Controllers.ServicoController.GetId(System.String)">
+            <summary>
+            Listar Serviço
+            </summary>
+            <param name="Servico">Serviço Modelo</param>
+            <param name="Id">Id do Serviço</param>
+            <param name="IdSupermercado">Id do Supermercado</param>
+            <param name="IdTipoServico">Id do Tipo de Serviço</param>
+            <param name="AtualSenha">Atual Senha</param>
+            <param name="ProxSenha">Próxima Senha</param>
+            <response code="200">OK</response>
+            <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
         <member name="M:Domain.Controllers.ServicoController.Post(Domain.Entities.Servico)">
@@ -579,23 +599,47 @@
             <param name="Id">Id do Serviço</param>
             <param name="IdSupermercado">Id do Supermercado</param>
             <param name="IdTipoServico">Id do Tipo de Serviço</param>
-            <param name="atualSenha">Atual Senha</param>
-            <param name="proxSenha">Próxima Senha</param>
+            <param name="AtualSenha">Atual Senha</param>
+            <param name="ProxSenha">Próxima Senha</param>
             <remarks>/POST
             {
-               "id": 1;
-               "idSupermercado": 1;
-               "idTipoServico": 2;
-               "atualSenha": 20;
-               "proxSenha": 30;
+               "IdSupermercado": 1,
+               "IdTipoServico": 2,
+               "AtualSenha": 20,
+               "ProxSenha": 30
              }
             </remarks>
             <response code="200">OK</response>
             <response code="201">Criado</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
-        <member name="M:Domain.Controllers.ServicoController.Delete(System.Int32)">
+        <member name="M:Domain.Controllers.ServicoController.Put(System.String,Domain.Entities.Servico)">
+            <summary>
+            Atualizar Serviço
+            </summary>
+            <param name="Servico">Serviço Modelo</param>
+            <param name="Id">Id do Serviço</param>
+            <param name="IdSupermercado">Id do Supermercado</param>
+            <param name="IdTipoServico">Id do Tipo de Serviço</param>
+            <param name="AtualSenha">Atual Senha</param>
+            <param name="ProxSenha">Próxima Senha</param>
+            <remarks>/PUT
+            {
+               "Id": 1,
+               "IdSupermercado": 1,
+               "IdTipoServico": 2,
+               "AtualSenha": 20,
+               "ProxSenha": 30
+             }
+            </remarks>
+            <response code="200">OK</response>
+            <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
+            <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
+        </member>
+        <member name="M:Domain.Controllers.ServicoController.Delete(System.String)">
             <summary>
             Deletar Serviço
             </summary>
@@ -603,10 +647,11 @@
             <param name="Id">Id do Serviço</param>
             <param name="IdSupermercado">Id do Supermercado</param>
             <param name="IdTipoServico">Id do Tipo de Serviço</param>
-            <param name="atualSenha">Atual Senha</param>
-            <param name="proxSenha">Próxima Senha</param>
+            <param name="AtualSenha">Atual Senha</param>
+            <param name="ProxSenha">Próxima Senha</param>
             <response code="200">OK</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
         <member name="M:Domain.Controllers.SupermercadoController.Get">
@@ -620,6 +665,21 @@
             <param name="Lng">Longitude do Supermercado</param>
             <response code="200">OK</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
+            <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
+        </member>
+        <member name="M:Domain.Controllers.SupermercadoController.GetId(System.String)">
+            <summary>
+            Listar Todos os Supermercados
+            </summary>
+            <param name="Supermercado">Supermercado Modelo</param>
+            <param name="Id">Id do Supermercado</param>
+            <param name="Nome">Nome do Supermercado</param>
+            <param name="Lat">Latitude do Supermercado</param>
+            <param name="Lng">Longitude do Supermercado</param>
+            <response code="200">OK</response>
+            <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
         <member name="M:Domain.Controllers.SupermercadoController.Post(Domain.Entities.Supermercado)">
@@ -633,18 +693,33 @@
             <param name="Lng">Longitude do Supermercado</param>
             <remarks>/POST
             {
-                "id": 1;
-                "name": Tauste;
-                "lat": 22.45;
-                "lng": -22.38;
+                "Id": 1,
+                "Nome": Tauste,
+                "Lat": -22.225837,
+                "Lng": -49.933186
              }
             </remarks>
             <response code="200">OK</response>
             <response code="201">Criado</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
-        <member name="M:Domain.Controllers.SupermercadoController.Delete(System.Int32)">
+        <member name="M:Domain.Controllers.SupermercadoController.Put(System.String,Domain.Entities.Supermercado)">
+            <summary>
+            Atualizar Supermercado
+            </summary>
+            <param name="Supermercado">Supermercado Modelo</param>
+            <param name="Id">Id do Supermercado</param>
+            <param name="Nome">Nome do Supermercado</param>
+            <param name="Lat">Latitude do Supermercado</param>
+            <param name="Lng">Longitude do Supermercado</param>
+            <response code="200">OK</response>
+            <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
+            <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
+        </member>
+        <member name="M:Domain.Controllers.SupermercadoController.Delete(System.String)">
             <summary>
             Deletar Supermercado
             </summary>
@@ -655,6 +730,7 @@
             <param name="Lng">Longitude do Supermercado</param>
             <response code="200">OK</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
         <member name="M:Domain.Controllers.TipoServicoController.Get">
@@ -666,6 +742,19 @@
             <param name="Nome">Nome do Tipo de Serviço</param>
             <response code="200">OK</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
+            <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
+        </member>
+        <member name="M:Domain.Controllers.TipoServicoController.GetId(System.String)">
+            <summary>
+            Listar Tipo de Serviço
+            </summary>
+            <param name="Tipo ServicoServico">Tipo Serviço Modelo</param>
+            <param name="Id">Id do Tipo de Serviço</param>
+            <param name="Nome">Nome do Tipo de Serviço</param>
+            <response code="200">OK</response>
+            <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
         <member name="M:Domain.Controllers.TipoServicoController.Post(Domain.Entities.TipoServico)">
@@ -677,16 +766,29 @@
             <param name="Nome">Nome do Tipo de Serviço</param>
             <remarks>/POST
             {
-                "id": 1;
-                "name": Açougue;
+                "Id": 1,
+                "Nome": Açougue
              }
             </remarks>
             <response code="200">OK</response>
             <response code="201">Criado</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
-        <member name="M:Domain.Controllers.TipoServicoController.Delete(System.Int32)">
+        <member name="M:Domain.Controllers.TipoServicoController.Put(System.String,Domain.Entities.TipoServico)">
+            <summary>
+            Atualizar Tipo de Serviço
+            </summary>
+            <param name="Tipo ServicoServico">Tipo Serviço Modelo</param>
+            <param name="Id">Id do Tipo de Serviço</param>
+            <param name="Nome">Nome do Tipo de Serviço</param>
+            <response code="200">OK</response>
+            <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
+            <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
+        </member>
+        <member name="M:Domain.Controllers.TipoServicoController.Delete(System.String)">
             <summary>
             Deletar Tipo de Serviço
             </summary>
@@ -695,7 +797,13 @@
             <param name="Nome">Nome do Tipo de Serviço</param>
             <response code="200">OK</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
+        </member>
+        <member name="T:Domain.Controllers.UsuarioController">
+            <summary>
+            Usuário Controller
+            </summary>
         </member>
         <member name="M:Domain.Controllers.UsuarioController.Get">
             <summary>
@@ -707,6 +815,7 @@
             <param name="Lng">Longitude do Usuário</param>
             <response code="200">OK</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
         <member name="M:Domain.Controllers.UsuarioController.GetId(System.String)">
@@ -719,7 +828,6 @@
             <param name="Lng">Longitude do Usuário</param>
             <response code="200">OK</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
-            <response code="404">Não Encontrado (Not Found)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
         <member name="M:Domain.Controllers.UsuarioController.Post(Domain.Entities.Usuario)">
@@ -732,17 +840,18 @@
             <param name="Lng">Longitude do Usuário</param>
             <remarks>/POST
             {
-                "id": 1;
-                "lat": 22.10;
-                "lng": -23.10;
+                "Id": 1,
+                "Lat": 22.10,
+                "Lng": -23.10
              }
             </remarks>
             <response code="200">OK</response>
             <response code="201">Criado</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
-        <member name="M:Domain.Controllers.UsuarioController.Put(System.Int32,Domain.Entities.Usuario)">
+        <member name="M:Domain.Controllers.UsuarioController.Put(System.String,Domain.Entities.Usuario)">
             <summary>
             Atualizar Usuário
             </summary>
@@ -752,6 +861,7 @@
             <param name="Lng">Longitude do Usuário</param>
             <response code="200">OK</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
         <member name="M:Domain.Controllers.UsuarioController.Delete(System.String)">
@@ -764,6 +874,7 @@
             <param name="Lng">Longitude do Usuário</param>
             <response code="200">OK</response>
             <response code="400">Solicitação imprópria (Bad Request)</response>
+            <response code="404">Não Encontrado (Not Found)</response>
             <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         </member>
     </members>

@@ -13,7 +13,7 @@ namespace Domain.Controllers
     public class SenhaController : ApiController
     {
         static List<Senha> _senhas = new List<Senha> {
-            new Senha(){Id=1,IdServico=1,IdUsuario=1,SenhaUsuario=19}
+            new Senha(){Id="1",IdServico="1",IdUsuario="1",SenhaUsuario=18}
         };
 
         //GET
@@ -27,6 +27,7 @@ namespace Domain.Controllers
         /// <param name="SenhaUsuario">Senha do Usuario</param>
         /// <response code="200">OK</response>
         /// <response code="400">Solicitação imprópria (Bad Request)</response>
+        /// <response code="404">Não Encontrado (Not Found)</response>
         /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         [ResponseType(typeof(Senha))]
         public IHttpActionResult Get()
@@ -48,18 +49,17 @@ namespace Domain.Controllers
         /// <response code="400">Solicitação imprópria (Bad Request)</response>
         /// <response code="404">Não Encontrado (Not Found)</response>
         /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
-        [ResponseType(typeof(Usuario))]
-        public IHttpActionResult GetId(int id)
+        [ResponseType(typeof(Senha))]
+        public IHttpActionResult GetId(String id)
         {
-            Senha senha = _senhas.Find(x => x.Id == id);
+            Senha Senha = _senhas.Find(x => x.Id == id);
 
-            if (senha != null)
+            if (Senha != null)
             {
-                return Ok(senha);
+                return Ok(Senha);
             }
             else
             {
-                //throw new HttpResponseException(HttpStatusCode.NotFound);
                 return NotFound();
             }
         }
@@ -76,29 +76,33 @@ namespace Domain.Controllers
         /// <param name="SenhaUsuario">Senha do Usuario</param>
         /// <remarks>/POST
         /// {
-        ///    "id": 1;
-        ///    "idSupermercado": 1;
-        ///    "idTipoServico": 2;
-        ///    "atualSenha": 20;
-        ///    "proxSenha": 30;
+        ///    "Id": 1,
+        ///    "IdSupermercado": 1,
+        ///    "IdTipoServico": 2,
+        ///    "AtualSenha": 20,
+        ///    "ProxSenha": 30
         ///  }
         /// </remarks>
         /// <response code="200">OK</response>
         /// <response code="201">Criado</response>
         /// <response code="400">Solicitação imprópria (Bad Request)</response>
+        /// <response code="404">Não Encontrado (Not Found)</response>
         /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         [ResponseType(typeof(Senha))]
-        public HttpResponseMessage Post([FromBody]Senha senha)
+        public IHttpActionResult Post(Senha Senha)
         {
-            if (senha != null)
+            var uuid = Guid.NewGuid().ToString();
+
+            Senha.Id = uuid;
+
+            if (Senha != null)
             {
-                _senhas.Add(senha);
-                var msg = new HttpResponseMessage(HttpStatusCode.Created);
-                return msg;
+                _senhas.Add(Senha);
+                return Ok(Senha);
             }
             else
             {
-                throw new HttpResponseException(HttpStatusCode.Conflict);
+                return NotFound();
             }
         }
 
@@ -114,23 +118,23 @@ namespace Domain.Controllers
         /// <param name="SenhaUsuario">Senha do Usuario</param>
         /// <response code="200">OK</response>
         /// <response code="400">Solicitação imprópria (Bad Request)</response>
+        /// <response code="404">Não Encontrado (Not Found)</response>
         /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         [ResponseType(typeof(Senha))]
-        public IHttpActionResult Put(int id, Senha senha)
+        public IHttpActionResult Put(String id, Senha Senha)
         {
-            Senha sen = _senhas.Find(x => x.Id == id);
+            Senha NovaSenha = _senhas.Find(x => x.Id.Equals(id));
 
-            if (senha != null)
+            if (Senha != null)
             {
-                sen.Id = senha.Id;
-                sen.IdServico = senha.IdServico;
-                sen.IdUsuario = senha.IdUsuario;
-                sen.SenhaUsuario = senha.SenhaUsuario;
-                return Ok(_senhas);
+                NovaSenha.Id = Senha.Id;
+                NovaSenha.IdServico = Senha.IdServico;
+                NovaSenha.IdUsuario = Senha.IdUsuario;
+                NovaSenha.SenhaUsuario = Senha.SenhaUsuario;
+                return Ok();
             }
             else
             {
-                //throw new HttpResponseException(HttpStatusCode.NotFound);
                 return NotFound();
             }
         }
@@ -147,20 +151,19 @@ namespace Domain.Controllers
         /// <param name="SenhaUsuario">Senha do Usuario</param>
         /// <response code="200">OK</response>
         /// <response code="400">Solicitação imprópria (Bad Request)</response>
+        /// <response code="404">Não Encontrado (Not Found)</response>
         /// <response code="500">Erro Interno de Servidor (Internal Server Error)</response>
         [ResponseType(typeof(Senha))]
         // DELETE api/values
-        public IHttpActionResult Delete(int id)
+        public IHttpActionResult Delete(String id)
         {
             if (id != null)
             {
-                //return new HttpResponseMessage(HttpStatusCode.OK);
-                _senhas = _senhas.Where(note => note.Id != id).ToList();
+                _senhas = _senhas.Where(note => !(note.Id.Equals(id))).ToList();
                 return Ok();
             }
             else
             {
-                //throw new HttpResponseException(HttpStatusCode.NotFound);
                 return NotFound();
             }
         }

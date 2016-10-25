@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\UsuarioContext.cs" />
-    <Compile Include="Entities\Acougue.cs" />
+    <Compile Include="Entities\Servico.cs" />
     <Compile Include="Entities\Senha.cs" />
     <Compile Include="Entities\Supermercado.cs" />
     <Compile Include="Entities\TipoServico.cs" />

@@ -1,6 +1,7 @@
 # NoQueue
 * Link do Repositório no GitHub: https://github.com/Fahantin/NoQueue
-* Link da Aplicação no Azure: http://no-queue.azurewebsites.net
+* Link da Aplicação AngularJS no Azure: http://noq.azurewebsites.net/
+* Link da WEB API no Azure: http://fahantin.azurewebsites.net/swagger/
 
 # Detalhes da aplicação
 
@@ -30,4 +31,13 @@ Entrega 2 - Prazo: 04/10
 * Projeto Domain Desenvolvido (.Net) [OK];
 * Web Application - Desenvolvida - Consumindo API (AngularJS) [OK];
 * Mobile Application - Desenvolvida - Consumindo API (Framework 7) [OK];
+* Projeto Enviado Para o Azure [OK]
+
+# Nota de Liberação 3.0
+```
+Entrega 3 - Prazo: 25/10
+```
+* UUID Em Todas as Classes [OK];
+* Controllers (Web API) com Get/Post/Put/Delete [OK];
+* Web Application - Front-End Utilizando Bootstrap e AngularJS [OK];
 * Projeto Enviado Para o Azure [OK]

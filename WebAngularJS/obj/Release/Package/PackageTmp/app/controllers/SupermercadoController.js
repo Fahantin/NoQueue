@@ -1,29 +1,125 @@
 ﻿angular.module("app")
     .controller("SupermercadoController",
-        function ($scope, $http) {
+        function ($scope, $http, $window) {
 
             $scope.retorno = [];
 
-            //var buscar = function () {
-            $scope.SupermercadoGet = function () {
+            $scope.Get = function () {
                 $http.get("http://fahantin.azurewebsites.net/api/v1/Supermercado")
                    .success(function (data) {
-                       console.log("Leitura");
+                       console.log("Listado");
                        $scope.retorno = data;
                    })
                    .error(function (erro) {
-                       console.log("Erro");
+                       console.log("Erro Get");
                        console.log(erro);
 
                    })
-                   .finally(function () { console.log("Leitura Finalizada"); });
+                   .finally(function () { console.log("Finalizado"); });
+            }
+
+
+            $scope.Get();
+
+
+            $scope.Post = function () {
+
+                var Objeto = {
+                    "Nome": $scope.addNome,
+                    "Lat": $scope.addLatitude,
+                    "Lng": $scope.addLongitude
+                }
+
+                $http.post("http://fahantin.azurewebsites.net/api/v1/Supermercado", Objeto)
+                   .success(function (data) {
+                       $scope.Get();
+                       Apagar(1);
+                       console.log("Criado");
+                   })
+                   .error(function (erro) {
+                       console.log("Erro Post");
+                       console.log(erro);
+
+                   })
+                   .finally(function () { console.log("Finalizado"); });
+            }
+
+
+            $scope.Put = function () {
+
+                var Objeto = {
+                    "Id": $scope.updId,
+                    "Nome": $scope.updNome,
+                    "Lat": $scope.updLatitude,
+                    "Lng": $scope.updLongitude
+                }
+
+                $http.put("http://fahantin.azurewebsites.net/api/v1/Supermercado/" + Objeto.Id, Objeto)
+                   .success(function (data) {
+                       $scope.Get();
+                       Apagar(2);
+                       console.log("Atualizado");
+                   })
+                   .error(function (erro) {
+                       console.log("Erro Put");
+                       console.log(erro);
+
+                   })
+                   .finally(function () {
+                       console.log("Finalizado");
+                       $scope.updHide = !$scope.updHide;
+                   });
+            }
+
+
+            $scope.Delete = function () {
+                $http.delete("http://fahantin.azurewebsites.net/api/v1/Supermercado/" + $scope.delId)
+                   .success(function (data) {
+                       $scope.Get();
+                       Apagar(3);
+                       console.log("Deletado");
+                   })
+                   .error(function (erro) {
+                       console.log("Erro Delete");
+                       console.log(erro);
+
+                   })
+                   .finally(function () { console.log("Finalizado"); });
+            }
+
+            //NEWS---------------------------------------------
+
+            $scope.BtnDeletar = function (r) {
+                if (confirm('Tem Certeza?')) {
+                    $http.delete("http://fahantin.azurewebsites.net/api/v1/Supermercado/" + r)
+                       .success(function (data) {
+                           $scope.Get();
+                           Apagar(3);
+                           console.log("Deletado");
+                       })
+                       .error(function (erro) {
+                           console.log("Erro BtnDeletar");
+                           console.log(erro);
+
+                       })
+                       .finally(function () { console.log("Finalizado"); });
+                }
+            }
+
+            $scope.BtnAlterar = function (r) {
+                $scope.updId = r.id
+                $scope.updNome = r.nome
+                $scope.updLatitude = r.lat
+                $scope.updLongitude = r.lng
+
+                $scope.updHide = !$scope.updHide;
             }
 
             function Apagar(x) {
                 if (x == 1) {
-                    $scope.cadNome = null;
-                    $scope.cadLatitude = null;
-                    $scope.cadLongitude = null;
+                    $scope.addNome = null;
+                    $scope.addLatitude = null;
+                    $scope.addLongitude = null;
                 }
                 else if (x == 2) {
                     $scope.updId = null;
@@ -35,69 +131,4 @@
                     $scope.delId = null;
                 }
             }
-
-            $scope.SupermercadoGet();
-
-            $scope.SupermercadoAdd = function () {
-
-                var Supermercado = {
-                    "Nome": $scope.cadNome,
-                    "Lat": $scope.cadLatitude,
-                    "Lng": $scope.cadLongitude
-                }
-
-                $http.post("http://fahantin.azurewebsites.net/api/v1/Supermercado", Supermercado)
-                         .success(function (data) {
-                             //$scope.retorno.add(Usuario);
-                             //$scope.ServicoGet();
-                             Apagar(1);
-                             console.log("Criado");
-                         })
-                         .error(function (erro) {
-                             console.log("Erro");
-                             console.log(erro);
-
-                         })
-                         .finally(function () { console.log("Criação Finalizada"); });
-            }
-
-
-            $scope.SupermercadoUpdate = function () {
-
-                var Supermercado = {
-                    "Id": $scope.updId,
-                    "Nome": $scope.updNome,
-                    "Lat": $scope.updLatitude,
-                    "Lng": $scope.updLongitude
-                }
-
-                $http.put("http://fahantin.azurewebsites.net/api/v1/Supermercado/" + $scope.updId, Supermercado)
-                   .success(function (data) {
-                       $scope.SupermercadoGet();
-                       Apagar(2);
-                       console.log("Alterado");
-                   })
-                   .error(function (erro) {
-                       console.log("Erro");
-                       console.log(erro);
-
-                   })
-                   .finally(function () { console.log("Alteração Finalizada"); });
-            }
-
-            $scope.SupermercadoDelete = function () {
-                $http.delete("http://fahantin.azurewebsites.net/api/v1/Supermercado/" + $scope.delId)
-                   .success(function (data) {
-                       $scope.SupermercadoGet();
-                       Apagar(3);
-                       console.log("Deletado");
-                   })
-                   .error(function (erro) {
-                       console.log("Erro");
-                       console.log(erro);
-
-                   })
-                   .finally(function () { console.log("Delete Finalizado"); });
-            }
-
-        }/*]*/);
+        });

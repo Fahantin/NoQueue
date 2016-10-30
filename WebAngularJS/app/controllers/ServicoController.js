@@ -1,30 +1,129 @@
 ﻿angular.module("app")
     .controller("ServicoController",
-        function ($scope, $http) {
+        function ($scope, $http, $window) {
 
             $scope.retorno = [];
 
-            //var buscar = function () {
-            $scope.ServicoGet = function () {
+            $scope.Get = function () {
                 $http.get("http://fahantin.azurewebsites.net/api/v1/Servico")
                    .success(function (data) {
-                       console.log("Leitura");
+                       console.log("Listado");
                        $scope.retorno = data;
                    })
                    .error(function (erro) {
-                       console.log("Erro");
+                       console.log("Erro Get");
                        console.log(erro);
 
                    })
-                   .finally(function () { console.log("Leitura Finalizada"); });
+                   .finally(function () { console.log("Finalizado"); });
+            }
+
+
+            $scope.Get();
+
+
+            $scope.Post = function () {
+
+                var Objeto = {
+                    "IdSupermercado": $scope.addIdSupermercado,
+                    "IdTipoServico": $scope.addIdTipoServico,
+                    "AtualSenha": 0,
+                    "ProxSenha": 1
+                }
+
+                $http.post("http://fahantin.azurewebsites.net/api/v1/Servico", Objeto)
+                   .success(function (data) {
+                       $scope.Get();
+                       Apagar(1);
+                       console.log("Criado");
+                   })
+                   .error(function (erro) {
+                       console.log("Erro Post");
+                       console.log(erro);
+
+                   })
+                   .finally(function () { console.log("Finalizado"); });
+            }
+
+
+            $scope.Put = function () {
+
+                var Objeto = {
+                    "Id": $scope.updId,
+                    "IdSupermercado": $scope.updIdSupermercado,
+                    "IdTipoServico": $scope.updIdTipoServico,
+                    "AtualSenha": $scope.updAtualSenha,
+                    "ProxSenha": $scope.updProxSenha
+                }
+
+                $http.put("http://fahantin.azurewebsites.net/api/v1/Servico/" + Objeto.Id, Objeto)
+                   .success(function (data) {
+                       $scope.Get();
+                       Apagar(2);
+                       console.log("Atualizado");
+                   })
+                   .error(function (erro) {
+                       console.log("Erro Put");
+                       console.log(erro);
+
+                   })
+                   .finally(function () {
+                       console.log("Finalizado");
+                       $scope.updHide = !$scope.updHide;
+                   });
+            }
+
+
+            $scope.Delete = function () {
+                $http.delete("http://fahantin.azurewebsites.net/api/v1/Servico/" + $scope.delId)
+                   .success(function (data) {
+                       $scope.Get();
+                       Apagar(3);
+                       console.log("Deletado");
+                   })
+                   .error(function (erro) {
+                       console.log("Erro Delete");
+                       console.log(erro);
+
+                   })
+                   .finally(function () { console.log("Finalizado"); });
+            }
+
+            //NEWS---------------------------------------------
+
+            $scope.BtnDeletar = function (r) {
+                if (confirm('Tem Certeza?')) {
+                    $http.delete("http://fahantin.azurewebsites.net/api/v1/Servico/" + r)
+                       .success(function (data) {
+                           $scope.Get();
+                           Apagar(3);
+                           console.log("Deletado");
+                       })
+                       .error(function (erro) {
+                           console.log("Erro BtnDeletar");
+                           console.log(erro);
+
+                       })
+                       .finally(function () { console.log("Finalizado"); });
+                }
+            }
+
+            $scope.BtnAlterar = function (r) {
+                $scope.updId = r.id
+                $scope.updIdSupermercado = r.idSupermercado
+                $scope.updIdTipoServico = r.idTipoServico
+                $scope.updAtualSenha = r.atualSenha
+                $scope.updProxSenha = r.proxSenha
+
+                $scope.updHide = !$scope.updHide;
             }
 
             function Apagar(x) {
                 if (x == 1) {
-                    $scope.cadIdSupermercado = null;
-                    $scope.cadIdTipoServico = null;
-                    $scope.cadAtualSenha = null;
-                    $scope.cadProxSenha = null;
+                    $scope.addIdSupermercado = null;
+                    $scope.addIdTipoServico = null;
+                    $scope.addAtualSenha = null;
+                    $scope.addProxSenha = null;
                 }
                 else if (x == 2) {
                     $scope.updId = null;
@@ -37,76 +136,4 @@
                     $scope.delId = null;
                 }
             }
-
-            $scope.ServicoGet();
-
-            $scope.ServicoAdd = function () {
-
-                var Servico = {
-                    "IdSupermercado": $scope.cadIdSupermercado,
-                    "IdTipoServico": $scope.cadIdTipoServico,
-                    "AtualSenha": $scope.cadAtualSenha,
-                    "ProxSenha": $scope.cadProxSenha
-                }
-
-                if (Servico.IdSupermercado != null && Servico.IdTipoServico != null) {
-
-                    $http.post("http://fahantin.azurewebsites.net/api/v1/Servico", Servico)
-                       .success(function (data) {
-                           //$scope.retorno.add(Usuario);
-                           //$scope.ServicoGet();
-                           Apagar(1);
-                           console.log("Criado");
-                       })
-                       .error(function (erro) {
-                           console.log("Erro");
-                           console.log(erro);
-
-                       })
-                       .finally(function () { console.log("Criação Finalizada"); });
-                }
-                else {
-                    alert("Valores Incorretos!");
-                }
-            }
-
-            $scope.ServicoUpdate = function () {
-
-                var Servico = {
-                    "Id": $scope.updId,
-                    "IdSupermercado": $scope.updIdSupermercado,
-                    "IdTipoServico": $scope.updIdTipoServico,
-                    "AtualSenha": $scope.updAtualSenha,
-                    "ProxSenha": $scope.updProxSenha
-                }
-
-                $http.put("http://fahantin.azurewebsites.net/api/v1/Servico/" + $scope.updId, Servico)
-                   .success(function (data) {
-                       $scope.ServicoGet();
-                       Apagar(2);
-                       console.log("Alterado");
-                   })
-                   .error(function (erro) {
-                       console.log("Erro");
-                       console.log(erro);
-
-                   })
-                   .finally(function () { console.log("Alteração Finalizada"); });
-            }
-
-            $scope.ServicoDelete = function () {
-                $http.delete("http://fahantin.azurewebsites.net/api/v1/Servico/" + $scope.delId)
-                   .success(function (data) {
-                       $scope.ServicoGet();
-                       Apagar(3);
-                       console.log("Deletado");
-                   })
-                   .error(function (erro) {
-                       console.log("Erro");
-                       console.log(erro);
-
-                   })
-                   .finally(function () { console.log("Delete Finalizado"); });
-            }
-
-        }/*]*/);
+        });
